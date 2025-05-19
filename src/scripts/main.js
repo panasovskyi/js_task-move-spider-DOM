@@ -23,8 +23,8 @@ document.addEventListener('click', (e) => {
   const spiderLeft = e.clientX - wallX - wallBorder - spiderWidth / 2;
   const spiderTop = e.clientY - wallY - wallBorder - spiderHeight / 2;
   const left = Math.max(0, Math.min(spiderLeft, wallWidth - spiderWidth));
-  const toP = Math.max(0, Math.min(spiderTop, wallHeight - spiderHeight));
+  const topMargin = Math.max(0, Math.min(spiderTop, wallHeight - spiderHeight));
 
   spider.style.left = `${left}px`;
-  spider.style.top = `${toP}px`;
+  spider.style.top = `${topMargin}px`;
 });
